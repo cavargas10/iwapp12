@@ -16,6 +16,10 @@ class UserModel
   public function getIdUser(){
     return $this->idUser; 
   }
+
+  public function setIdUser($idUser){
+    $this->idUser = $idUser;
+  }
  
   public function setNombres($nombres){
     $this->nombres = $nombres;
@@ -74,7 +78,7 @@ class UserModel
   public function DeleteUser() {
     $miconexion = new clase_mysqli;
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-    $resSQL=$miconexion->consulta("delete from usuarios where id='$idUser'");
+    $resSQL=$miconexion->consulta("delete from usuarios where id='$this->idUser'");
 
     //$this->Disconnect();
     return $resSQL;

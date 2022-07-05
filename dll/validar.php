@@ -3,7 +3,7 @@
    if(($_POST['correo']) && ($_POST['clave']))
    {
       $correo=$_POST['correo'];
-      $clave=md5($_POST['clave']); 
+      $clave= md5 ($_POST['clave']); 
 
       include ("config.php");
 		include ("class_mysqli.php");
@@ -15,7 +15,7 @@
 		if ($list[0]) {
             $_SESSION['autentificado'] = TRUE;
             $_SESSION['username'] = $list[1]." ".$list[2];
-	         $_SESSION['roll'] = $list[5]; 
+	        $_SESSION['roll'] = $list[5]; 
             //$_SESSION['local_path']=$local_path;
             echo "<script>location.href='../administrator/index.php'</script>";
 		}else{

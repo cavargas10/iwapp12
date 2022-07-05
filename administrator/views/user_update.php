@@ -8,7 +8,7 @@
     $lista = $control2->ListaUser($idUser);
 
 	$control= new user_controller();
-    $control->UpdateUser();
+    $control->UpdateUser($idUser);
 ?>
 <h1>Nuevo Usuarios</h1>
 <form method="post" action="">

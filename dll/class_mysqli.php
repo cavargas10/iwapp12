@@ -92,7 +92,7 @@ class clase_mysqli{
 				//echo "<td>".utf8_encode($row[$i])."</td>";
 				echo "<td>".$row[$i]."</td>";
 			}
-			echo  "<td><a href='user.php'>Borrar</a></td>";
+			echo  "<td><a href='user.php?idUser=$row[0]'>Borrar</a></td>";
 			echo  "<td><a href='user_update.php?idUser=$row[0]'>Actualizar</a></td>";
 			echo "</tr>";
 		}
@@ -107,14 +107,14 @@ class clase_mysqli{
 			return $row;
 		}
 	}
-
+/*
 	function consulta_json(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			$data[]=$row;
 		}
 		echo json_encode(array("sensores"=>$data));
 	}
-	function consulta_busqueda_json(){
+	function consulta_busqueda_json(){ 
 		if($this->numcampos() > 0){
 			while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 				$data[]=$row;
@@ -126,6 +126,6 @@ class clase_mysqli{
 
 	    echo  json_encode($resultData);
 	}
-
+*/
 }
 ?>
